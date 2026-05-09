@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+body {
+    background-color: #e5e5e5;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
