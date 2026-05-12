@@ -14,7 +14,7 @@ const Navbar = () => {
   // Services data for mobile menu
   const servicesLinks = [
     { to: "/services/moduler_kitchen_&_wardrobe", text: "MODULAR KITCHEN & WARDROBE" },
-    { to: "/services/bar_&_lcd_unit", text: "BAR & LCD UNIT" }, 
+    { to: "/services/bar_&_lcd_unit", text: "BAR & LCD UNIT" },
     { to: "/services/vanities", text: "VANITIES" },
     { to: "/services/bespoke_furniture", text: "BESPOKE FURNITURE" },
     { to: "/services/doors", text: "DOORS" },
@@ -31,7 +31,10 @@ const Navbar = () => {
         { to: "/gallery/wardrobe", text: "Wardrobe" },
         { to: "/gallery/vanity", text: "Vanity" },
         { to: "/gallery/bar-unit", text: "Bar Unit" },
+        { to: "/gallery/lcd_unit", text: "LCD UNIT" },
+        { to: "/gallery/doors", text: "DOORS" },
         { to: "/gallery/wall-paneling", text: "Wall Paneling" },
+        { to: "/gallery/trunkey_interior_projects", text: "TURNKEY INTERIOR PROJECT" },
       ],
     },
     {
@@ -87,20 +90,18 @@ const Navbar = () => {
                 <div className="flex items-center gap-1 cursor-pointer font-medium text-gray-800 hover:text-[#c9a46c] transition-colors group">
                   {menu.label}
                   <FaChevronDown
-                    className={`text-xs transition-all duration-300 ${
-                      openMenu === menu.id ? "rotate-180 text-[#c9a46c]" : ""
-                    }`}
+                    className={`text-xs transition-all duration-300 ${openMenu === menu.id ? "rotate-180 text-[#c9a46c]" : ""
+                      }`}
                   />
                 </div>
 
                 {/* DROPDOWN */}
                 <div
                   className={`absolute left-0 top-full w-72 bg-white shadow-2xl rounded-lg overflow-hidden border border-gray-100 origin-top transition-all duration-300 ease-out z-50
-                  ${
-                    openMenu === menu.id
+                  ${openMenu === menu.id
                       ? "opacity-100 visible translate-y-2 scale-100"
                       : "opacity-0 invisible translate-y-0 scale-95"
-                  }`}
+                    }`}
                 >
                   <div className="py-2 max-h-96 overflow-y-auto">
                     {menu.items.map((item, i) => (
@@ -118,8 +119,8 @@ const Navbar = () => {
             ))}
 
             {/* MATERIALS LINK */}
-            <Link 
-              to="/materials" 
+            <Link
+              to="/materials"
               className="font-medium text-gray-800 hover:text-[#c9a46c] transition-colors"
             >
               Materials
@@ -175,14 +176,14 @@ const Navbar = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <Link 
-                    to="/" 
-                    onClick={() => setMobileMenu(false)} 
+                  <Link
+                    to="/"
+                    onClick={() => setMobileMenu(false)}
                     className="block py-3 px-3 text-gray-800 hover:bg-[#c9a46c]/10 hover:text-[#c9a46c] rounded-lg transition-all"
                   >
                     Home
                   </Link>
-                  
+
                   {/* Gallery Section */}
                   <div className="mt-2">
                     <div className="py-2 px-3 text-sm font-semibold text-[#c9a46c] uppercase tracking-wider">
@@ -251,9 +252,9 @@ const Navbar = () => {
                     ))}
                   </div>
 
-                  <Link 
-                    to="/materials" 
-                    onClick={() => setMobileMenu(false)} 
+                  <Link
+                    to="/materials"
+                    onClick={() => setMobileMenu(false)}
                     className="block py-3 px-3 mt-4 text-gray-800 hover:bg-[#c9a46c]/10 hover:text-[#c9a46c] rounded-lg transition-all"
                   >
                     Materials
@@ -262,7 +263,7 @@ const Navbar = () => {
 
                 {/* Contact Button in Mobile */}
                 <div className="mt-8 pt-4 border-t border-gray-200">
-                  <button 
+                  <button
                     onClick={() => {
                       setMobileMenu(false);
                       setOpenDrawer(true);

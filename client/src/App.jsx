@@ -13,6 +13,7 @@ import DashboardLayout from "./dashboard/DashboardLayout ";
 import DashboardHome from "./dashboard/DashboardHome";
 import Materials from "./pages/Materials";
 import ServiceDetails from "./pages/ServiceDetails";
+import GalleryDetails from "./pages/GalleryDetails";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/materials" element={<Materials />} />
         <Route path="/services/:slug" element={<ServiceDetails />} />
+        <Route path="/gallery/:slug" element={<GalleryDetails />} />
 
         {/* PROTECTED DASHBOARD ROUTES */}
         <Route element={<ProtectedRoute />}>
